@@ -1,0 +1,48 @@
+
+Problématique 1 : (Page : DataGameController) Problème de réception des données de ma Base de donnée vers mon AJAX.
+Lors de ma connexion à ma base de donnée, je n'accédais pas mes données qui était en Array 
+
+Résolu 1 : Fallait décoder la connexion de la base en utilisant " [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"] " qui permet de passer les éléments de la base en donnée en UTF8
+
+
+Problématique 2 : (Page : index.php) Problème de redirection d'une URL généré en PHP suite a une inscription et vérification des éléments de base de l'utilisateur.
+La problématique etait que lorsque j'inscrivais un utilisateur , je fesais un appel ajax qui permettais d'entrer ces informations dans la base de donnée afin qu'il puisse se connecter , mais lors de la data (retour de l'appel ajax) 
+je ne pouvais rediriger le nouvel inscrit sur la page des informations complémentaires (InformationPage.html).
+
+Résolu 2 : Fallait utiliser la méthode " document.location.href " en Javascript afin d'utiliser la redirection envoyé par le controller en Javascript
+
+Problématique 3 : Génération de Route (Création d'un controller "PageManager") 
+Suite à une problématique de redirection et appellage de méthode via des appels AJAX, je serai contrains à créer un " manager de route " qui devra 
+vérifier ce que j'envoie (GET ou POST) et relié la route au méthode de mes controller.
+
+
+
+
+
+
+CDN Utiles 
+
+	Outils CSS
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.10/css/mdb.min.css" rel="stylesheet">
+
+
+
+	Outils Javascript
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"</script>
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.10/js/mdb.min.js"></script>
